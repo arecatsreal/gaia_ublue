@@ -43,20 +43,14 @@ modules:
       - pass
       - fzf
       - feh
-      - xremap-wlroots
       - doas
       - neovim
       - luarocks
       - npm
       - golang
       - pipx
-      - squeekboard
-      - polkit-qt
-      - nwg-dock
       - gamemode
       - pinentry-qt
-      - lisgd
-      - power-profiles-daemon
 
       # Gameing
       - steam
@@ -95,6 +89,7 @@ modules:
         - io.github.hrkfdn.ncspot
         - io.github.zen_browser.zen
         - org.kde.falkon
+        - io.mpv.Mpv
 
         - org.prismlauncher.PrismLauncher
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
