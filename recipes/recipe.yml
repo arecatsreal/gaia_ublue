@@ -18,7 +18,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
-      - https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-40/atim-heroic-games-launcher-fedora-40.repo
     install:
       - alacritty
       - newsboat
@@ -53,8 +52,6 @@ modules:
       - pinentry-qt
 
       # Gameing
-      - steam
-      - heroic-games-launcher-bin
       - gamemode
       - mangohud
       - java-21-openjdk
@@ -90,8 +87,16 @@ modules:
         - io.github.zen_browser.zen
         - org.kde.falkon
         - io.mpv.Mpv
+        - ch.protonmail.protonmail-bridge
+        - me.proton.Mail
 
+        # Gaming
         - org.prismlauncher.PrismLauncher
+        - com.heroicgameslauncher.hgl
+        - com.vysp3r.ProtonPlus
+        - com.valvesoftware.Steam
+        - com.dec05eba.gpu_screen_recorder
+        - com.github.Matoking.protontricks
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
