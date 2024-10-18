@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: gaia_ublue
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/sericea
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -17,10 +17,60 @@ modules:
 
   - type: rpm-ostree
     repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://repository.mullvad.net/rpm/stable/mullvad.repo
+      - https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-40/atim-heroic-games-launcher-fedora-40.repo
     install:
-      # - micro
-      # - starship
+      - alacritty
+      - newsboat
+      - btop
+      - bat
+      - eza
+      - ripgrep
+      - zsh
+      - vifm
+      - jq
+      - aria2
+      - wget
+      - yt-dlp
+      - mullvad-vpn
+      - fuse-sshfs
+      - mpv
+      - qutebrowser
+      - speedcrunch
+      - bemenu
+      - fastfetch
+      - distrobox
+      - pass
+      - fzf
+      - feh
+      - xremap-wlroots
+      - doas
+      - neovim
+      - luarocks
+      - npm
+      - golang
+      - pipx
+      - squeekboard
+      - polkit-qt
+      - nwg-dock
+      - gamemode
+      - pinentry-qt
+      - lisgd
+      - power-profiles-daemon
+
+      # Gameing
+      - steam
+      - heroic-games-launcher-bin
+      - gamemode
+      - mangohud
+      - java-21-openjdk
+      - java-17-openjdk
+      - java-1.8.0-openjdk
+
+      # Fonts
+      - google-noto-sans-cjk-fonts
+      - google-noto-emoji-fonts
+      - google-noto-color-emoji-fonts
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -31,13 +81,22 @@ modules:
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+        - com.github.tchx84.Flatseal
+        - org.gimp.GIMP
+        - com.discordapp.Discord
+        - com.spotify.Client
+        - io.github.hrkfdn.ncspot
+        - io.github.zen_browser.zen
+        - org.kde.falkon
+
+        - org.prismlauncher.PrismLauncher
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
