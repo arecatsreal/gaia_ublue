@@ -48,8 +48,17 @@ modules:
       - npm
       - golang
       - pipx
-      - gamemode
       - pinentry-qt
+
+      - speedcrunch
+      - fd
+      - android-file-transfer
+      - virt-manager
+      - kvantum
+      - qt6ct
+      - fcitx5
+      - fcitx5-mozc
+
 
       # Gameing
       - gamemode
