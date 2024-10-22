@@ -51,7 +51,7 @@ modules:
       - pinentry-qt
 
       - speedcrunch
-      - fd
+      - fd-find
       - android-file-transfer
       - virt-manager
       - kvantum
