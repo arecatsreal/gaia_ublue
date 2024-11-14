@@ -58,6 +58,9 @@ modules:
       - qt6ct
       - fcitx5
       - fcitx5-mozc
+      - qbittorrent
+      - python3-toml
+      - gamescope
 
 
       # Gameing
