@@ -54,6 +54,9 @@ modules:
       - fd-find
       - android-file-transfer
       - virt-manager
+      - polkit
+      - fedora-release-ostree-desktop
+      - polkit-qt
       - kvantum
       - qt6ct
       - fcitx5
