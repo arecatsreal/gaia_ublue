@@ -57,6 +57,7 @@ modules:
       - polkit
       - fedora-release-ostree-desktop
       - polkit-qt
+      - polkit-kde
       - kvantum
       - qt6ct
       - fcitx5
